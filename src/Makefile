@@ -44,7 +44,7 @@ RM ?= rm -rf
 
 all: $(TARGET)
 
-$(TARGET): main.c tools.c audio.c
+$(TARGET): main.c tools.c audio.c ringbuffer.c
 	@echo "Building $@..."
 	@echo $(ARCH)
 	@echo $(SOURCES)

@@ -2,10 +2,11 @@
 #include <stdlib.h>
 #include "portaudio.h"
 
-void DevicesInfo() {
-	PaError error;
+void DevicesInfo(void)
+{
 	const PaDeviceInfo *devices_info;
 	int i, devices_nb;
+	PaError error;
 
 	error = Pa_Initialize();
 	if (error != paNoError) {
@@ -14,14 +15,14 @@ void DevicesInfo() {
 	}
 
 	devices_nb = Pa_GetDeviceCount();
-	if(devices_nb < 0) {
+	if (devices_nb < 0) {
 		fprintf(stderr, "Error: no device found\n");
 		exit(EXIT_FAILURE);
 	}
 
 	fprintf(stdout, "Devices information\n");
 	fprintf(stdout, "-------------------\n");
-	for(i = 0; i < devices_nb; i++) {
+	for (i = 0; i < devices_nb; i++) {
 		devices_info = Pa_GetDeviceInfo(i);
 		fprintf(stdout,
 			"#%i: %s\n",
@@ -39,7 +40,8 @@ void DevicesInfo() {
 	}
 }
 
-int main(int argc, char *argv[]) {
+int main(int argc, char *argv[])
+{
 	DevicesInfo();
 	return EXIT_SUCCESS;
 }
