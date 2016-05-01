@@ -92,7 +92,6 @@ local_settings.py
 instance/
 
 # Sphinx documentation
-docs/_build/
 
 # PyBuilder
 target/
@@ -105,3 +104,8 @@ target/
 
 # Project specific
 TODO/
+
+# Sphinx documentation
+_build/
+_templates/
+

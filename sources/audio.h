@@ -1,3 +1,7 @@
+/**
+ * @file audio.h
+ * @brief audio core header file
+ */
 #ifndef _audio_h
 #define _audio_h
 #include "portaudio.h"
