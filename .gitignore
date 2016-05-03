@@ -104,8 +104,27 @@ target/
 
 # Project specific
 TODO/
+*.swp
 
 # Sphinx documentation
 _build/
 _templates/
 
+# Autotools
+*.m4
+*.in
+Makefile
+autom4te.cache
+compile
+*.status
+configure
+depcomp
+install-sh
+.deps/
+missing
+*.guess
+*.sub
+
+# few binaries
+ewo
+devinfo
