@@ -1,13 +1,10 @@
 language: c
 compiler: gcc
 
-sudo: false
-
-addons:
-        apt:
-                - portaudio
 
 before_script:
+        - sudo apt-get update -qq
+        - sudo apt-get install portaudio
         - ./autogen.sh
 
 script:
