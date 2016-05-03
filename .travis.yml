@@ -1,0 +1,20 @@
+language: c
+compiler: gcc
+
+sudo: false
+
+addons:
+        apt:
+                - portaudio
+
+before_script:
+        - ./autogen.sh
+
+script:
+        - ./configure && make
+
+# Whitelists
+branches:
+        only:
+                - master
+                - develop
