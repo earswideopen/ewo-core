@@ -7,8 +7,6 @@
 
 #include "audio.h"
 
-#define VERSION "proto-0.1.0"
-
 int main(int argc, char *argv[])
 {
 	PaOpenStream();
