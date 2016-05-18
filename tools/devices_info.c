@@ -40,8 +40,7 @@ void DevicesInfo(void)
 	}
 }
 
-int main(int argc, char *argv[])
+void main(int argc, char *argv[])
 {
 	DevicesInfo();
-	return EXIT_SUCCESS;
 }
