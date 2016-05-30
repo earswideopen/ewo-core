@@ -105,6 +105,7 @@ target/
 # Project specific
 TODO/
 *.swp
+audio/
 
 # Sphinx documentation
 _build/
