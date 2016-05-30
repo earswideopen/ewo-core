@@ -11,9 +11,24 @@
 #include <portaudio.h>
 #include "tools.h"
 #include "ringbuffer.h"
+#include "filters.h"
 
 static PaError err;
 static PaStream *stream = {0};
+static SAMPLE first_fir = {0};
+/* low-pass coefficients for 10 taps */
+#define NTAPS 21
+static SAMPLE z[2 * NTAPS];
+static SAMPLE coefficients[NTAPS] =
+{
+	0.0068831,	0.0089553,	0.0148626,	0.0241587,
+	0.0360157,	0.0493076,	0.0627273,	0.0749272,
+	0.0846656,	0.0909423,	0.0931093,	0.0909423,
+	0.0846656,	0.0749272,	0.0627273,	0.0493076,
+	0.0360157,	0.0241587,	0.0148626,	0.0089553,
+	0.0068831
+};
+
 
 /**
  * \fn		void PaErrorTest(PaError error)
@@ -73,8 +88,12 @@ int PlayrecCallback(const void *input_buffer,
 	/* we transfer the input samples to the output */
 	if (input_buffer != NULL) {
 		for (i = 0; i < frames_per_buffer; i++) {
+			*out++ = fir_basic(*in++, NTAPS, coefficients, z);
+			*out++ = fir_basic(*in++, NTAPS, coefficients, z);
+			/*
 			*out++ = *in++;
 			*out++ = *in++;
+			 */
 		}
 	}
 	return paContinue;
