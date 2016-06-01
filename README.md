@@ -1,5 +1,7 @@
 # Ear Wide Open
 
+Build status (branch develop): [![Build Status](https://travis-ci.org/earswideopen/ewo.svg?branch=develop)](https://travis-ci.org/earswideopen/ewo)
+
 ## Vision
 
 The project aims to create and propose, as a community, an open source hearing
