@@ -1,1 +1,1 @@
-SUBDIRS = sources tools
+SUBDIRS = src tools
