@@ -5,5 +5,5 @@ AC_SEARCH_LIBS([cos], [m], [], AC_MSG_ERROR(Portaudio requires the M library))
 AC_SEARCH_LIBS([pthread_create], [pthread], [], AC_MSG_ERROR(RtAudio requires the pthread library!))
 AC_SEARCH_LIBS([Pa_GetVersion], [portaudio], [], AC_MSG_ERROR(Portaudio is required))
 AC_PROG_CC
-AC_CONFIG_FILES([Makefile sources/Makefile tools/Makefile])
+AC_CONFIG_FILES([Makefile src/Makefile tools/Makefile])
 AC_OUTPUT
