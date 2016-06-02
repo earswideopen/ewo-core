@@ -4,9 +4,13 @@ compiler: gcc
 
 before_script:
         - sudo apt-get update -qq
-        - sudo apt-get install -y libportaudio2 portaudio19-dev libasound2 libasound2-dev libcmocka-dev
+        - sudo apt-get install -y libportaudio2 portaudio19-dev libasound2 libasound2-dev
 
         - ./autogen.sh
+
+before_install:
+        - wget http://launchpadlibrarian.net/206614257/libcmocka0_1.0.1-2_i386.deb
+        - sudo dpkg -i libcmocka0_1.0.1-2_i386.deb
 
 script:
         - ./configure && make
