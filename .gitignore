@@ -125,6 +125,8 @@ install-sh
 missing
 *.guess
 *.sub
+test-driver
+.dirstamp
 
 # few binaries
 ewo
