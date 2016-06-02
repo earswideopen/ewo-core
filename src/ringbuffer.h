@@ -1,3 +1,6 @@
+#ifndef RINGBUFFER_H
+#define RINGBUFFER_H
+
 #define RINGBUFFER_SIZE 256
 
 typedef struct {
@@ -24,3 +27,4 @@ void RingBufferPut(RingBuffer_t *_this, const unsigned char c);
 
 /* flush the queue and optionnaly clear the buffer bytes to 0 */
 void RingBufferFlush(RingBuffer_t *_this, const int clear_buffer);
+#endif /* RINGBUFFER_H */

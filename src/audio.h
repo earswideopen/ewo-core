@@ -2,8 +2,9 @@
  * @file audio.h
  * @brief audio core header file
  */
-#ifndef _audio_h
-#define _audio_h
+#ifndef AUDIO_H
+#define AUDIO_H
+
 #include "portaudio.h"
 
 void PaInitialization(void);
@@ -15,4 +16,4 @@ int PlayrecCallback(const void *input_buffer,
 			   PaStreamCallbackFlags status_flags,
 			   void *user_data);
 
-#endif /* _audio_h */
+#endif /* AUDIO_H */
