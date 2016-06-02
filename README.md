@@ -24,14 +24,18 @@ March 2016.
 The source code is mainly written in ANSI-C and requires the following program
 or libraries for the compilation:
 
-- pkg-config >= 0.29.1
 - gcc >= 5.3.0
+- autoconf >= 2.69
 - GNU make >= 4.1
 - Portaudio >= V19
+- cmocka (should be optionnal to run the tests)
 
-Once these dependencies satisfied, you can compile the program using the command:
+Once these dependencies satisfied, you can compile the program using the following
+commands from the root of the project:
 
 ```
+$ ./autogen.sh
+$ ./configure
 $ make
 ```
 
