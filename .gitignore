@@ -127,6 +127,8 @@ missing
 *.sub
 test-driver
 .dirstamp
+config.h*
+stamp-h1
 
 # few binaries
 ewo

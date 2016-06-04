@@ -1,10 +1,10 @@
-#b   Autoconf requirements
+# Autoconf requirements
 AC_INIT([earswideopen], [0.1.0-alpha.2], [matthieu+ewo-bugs@berjon.net])
 AM_INIT_AUTOMAKE([foreign -Wall -Werror subdir-objects])
 
 # Information about the package
-#AC_MSG_NOTICE([Top source dir: $srcdir])
-#AC_MSG_NOTICE([Top source dir: $top_builddir])
+
+AC_CANONICAL_HOST
 
 # Check for programs
 
@@ -39,6 +39,9 @@ AC_SEARCH_LIBS(\
 
 
 # Check for header files
+
+AC_CHECK_HEADERS([stdlib.h stdio.h])
+
 # Check for types
 # Check for structures
 
@@ -52,6 +55,7 @@ AC_SEARCH_LIBS(\
 
 
 AC_CONFIG_SRCDIR([src/main.c])
+AC_CONFIG_HEADER([config.h])
 AC_CONFIG_FILES([\
                  Makefile \
                  src/Makefile \
