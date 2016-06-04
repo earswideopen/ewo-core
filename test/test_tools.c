@@ -5,11 +5,6 @@
 
 #include "tools.h"
 
-void test1()
-{
-	assert_int_equal(DumbFun(1), 2);
-}
-
 void test2()
 {
 	assert_int_equal(ModuloInc(2, 256), 3);
@@ -19,7 +14,6 @@ void test2()
 int main(void)
 {
 	const struct CMUnitTest tests[] = {
-		cmocka_unit_test(test1),
 		cmocka_unit_test(test2),
 	};
 
