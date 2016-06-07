@@ -1,0 +1,18 @@
+{
+    "config": "default",
+    "deviceSetup":
+    {
+        "device_id": 3,
+        "samplerate": 44100,
+        "input_channels": 2,
+        "output_channels": 2,
+        "frames_per_buffer": 256,
+        "sample_format": "paFloat32"
+    },
+    "fir_parameters":
+    {
+        "id": 1,
+        "taps_number": 21,
+        "coefficients": [ 0.0068831,  0.0089553,  0.0148626,  0.0241587, 0.0360157,  0.0493076,  0.0627273,  0.0749272, 0.0846656,  0.0909423,  0.0931093,  0.0909423, 0.0846656,  0.0749272,  0.0627273,  0.0493076, 0.0360157,  0.0241587,  0.0148626,  0.0089553, 0.0068831 ]
+    }
+}
