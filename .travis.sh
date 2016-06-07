@@ -33,6 +33,3 @@ cmake ..
 make
 sudo make install
 cd $PWD
-
-# Run autoreconf
-autoreconf -fvi
