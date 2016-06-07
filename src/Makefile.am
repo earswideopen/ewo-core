@@ -4,4 +4,5 @@ ewo_SOURCES = \
 			  audio.c \
 			  tools.c \
 			  ringbuffer.c \
-			  filters.c
+			  filters.c \
+			  parser.c

@@ -34,13 +34,20 @@ AC_SEARCH_LIBS(\
 AC_SEARCH_LIBS(\
                [Pa_GetVersion], \
                [portaudio], \
-               [], AC_MSG_ERROR(Portaudio is required)\
+               [], \
+               AC_MSG_ERROR(Portaudio is required)\
+               )
+AC_SEARCH_LIBS(\
+               [yajl_tree_parse], \
+               [yajl], \
+               [], \
+               AC_MSG_ERROR(Yajl is required)\
                )
 
 
 # Check for header files
 
-AC_CHECK_HEADERS([stdlib.h stdio.h])
+AC_CHECK_HEADERS([stdlib.h stdio.h string.h unistd.h])
 
 # Check for types
 # Check for structures
