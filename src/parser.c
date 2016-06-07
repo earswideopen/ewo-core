@@ -126,7 +126,7 @@ int FreeConfigFile(yajl_val node)
  * work as well on the return value to ensure that the proper code is returned
  * to the program.
  */
-int LoadConfigFile(void)
+yajl_val LoadConfigFile(void)
 {
 	FILE *fp = NULL;
 	size_t rd;
@@ -180,7 +180,7 @@ int LoadConfigFile(void)
 	fprintf(stdout, "my value is: %d\n", test2);
 	FreeConfigFile(node);
 	*/
-	return EXIT_SUCCESS;
+	return node;
 }
 
 
