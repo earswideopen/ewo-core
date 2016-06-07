@@ -1,0 +1,38 @@
+#!/bin/sh
+
+PWD=$(pwd)
+PACKAGES="\
+    libportaudio2 \
+    portaudio19-dev \
+    libasound2 \
+    libasound2-dev\
+    "
+
+# Install all required packages existing in Ubuntu 12.04
+sudo apt-get update -qq
+sudo apt-get install -y $PACKAGES
+
+# Installation of Cmocka framework
+wget https://cmocka.org/files/1.0/cmocka-1.0.1.tar.xz
+tar -xvf cmocka-1.0.1.tar.xz
+pushd cmocka-1.0.1
+mkdir build
+cd build
+cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release ..
+make
+sudo make install
+popd
+
+# Installation of Yajl library
+wget http://github.com/lloyd/yajl/tarball/2.1.0 -O yajl-2.1.0.tar.gz
+tar -xvf yajl-2.1.0.tar.gz
+pushd lloyd-yajl-66cb08c/
+mkdir build
+cd build
+cmake ..
+make
+sudo make install
+popd
+
+# Run autoreconf
+autoreconf -fvi
