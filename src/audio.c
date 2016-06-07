@@ -9,9 +9,11 @@
 #include <stdlib.h>
 
 #include <portaudio.h>
+#include "yajl/yajl_tree.h"
 #include "tools.h"
 #include "ringbuffer.h"
 #include "filters.h"
+#include "parser.h"
 
 static PaError err;
 static PaStream *stream = {0};
@@ -140,33 +142,49 @@ static void PaClose(PaStream *stream)
  * \brief		Open the audio stream through Portaudio framework.
  *
  * Exit and return an error if raised
+ *
+ * \todo There are multiple things to do:
+ * - Find a way to include the sample format in the configuration file. In other
+ *   words, the sample_format is a string in the configuration file and should a
+ *   PaSampleFormat.
+ * - Check with IsParamExist the input/output_latency parameter and if specified
+ *   return the latency otherwise use defaultLowInput/OutputLatency from
+ *   portaudio
+ * - get information about the hostApiSpecificStreamInfo to understand the exact
+ *   information that should be stored inside.
  */
 void PaOpenStream(void)
 {
 	PaStreamParameters in_params, out_params;
-	int num_channels = 2;
-	int samplerate = 44100;
-	int device_id = 3;
-	int frames_per_buffer = 256;
 	char sample_format = paFloat32;
 
 	PaInit();
 
-	/* INPUTS */
-	in_params.device = device_id;
-	in_params.channelCount = num_channels;
+	/* Parse the configuration file */
+	yajl_val node = LoadConfigFile();
+
+	/* input configuration */
+	in_params.device = GetIntegerParam(node, "deviceSetup", "device_id");
 	in_params.sampleFormat = sample_format;
+	in_params.channelCount = GetIntegerParam(node, "deviceSetup", "input_channels");
 	in_params.suggestedLatency =
 		Pa_GetDeviceInfo(in_params.device)->defaultLowInputLatency;
 	in_params.hostApiSpecificStreamInfo = NULL;
 
-	/* OUTPUTS */
-	out_params.device = device_id;
-	out_params.channelCount = num_channels;
+	/* output configuration */
+	out_params.device = GetIntegerParam(node, "deviceSetup", "device_id");
 	out_params.sampleFormat = sample_format;
+	out_params.channelCount = GetIntegerParam(node, "deviceSetup", "output_channels");
 	out_params.suggestedLatency =
 		Pa_GetDeviceInfo(out_params.device)->defaultLowOutputLatency;
 	out_params.hostApiSpecificStreamInfo = NULL;
+
+	/* misc configuration */
+	int samplerate = GetIntegerParam(node, "deviceSetup", "samplerate");
+	int frames_per_buffer = GetIntegerParam(node, "deviceSetup", "frames_per_buffer");
+
+	/* free the node */
+	FreeConfigFile(node);
 
 	RingBuffer_t buffer;
 
