@@ -2,6 +2,7 @@
 
 PWD=$(pwd)
 PACKAGES="\
+    libtool \
     libportaudio2 \
     portaudio19-dev \
     libasound2 \
