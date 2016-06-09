@@ -10,7 +10,10 @@ PACKAGES="\
     "
 
 # Install all required packages existing in Ubuntu 12.04
+sudo add-apt-repository ppa:dns/gnu -y
 sudo apt-get update -qq
+## Specific update of autoconf and automake to avoid a bug from an obsolete command
+sudo apt-get install --only-upgrade autoconf automake
 sudo apt-get install -y $PACKAGES
 
 # Installation of Cmocka framework

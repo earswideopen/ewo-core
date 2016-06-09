@@ -13,6 +13,6 @@ script:
 
 # Whitelists
 branches:
-        only:
-                - master
-                - develop
+    only:
+        - master
+        - develop
