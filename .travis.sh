@@ -13,8 +13,16 @@ PACKAGES="\
 sudo add-apt-repository ppa:dns/gnu -y
 sudo apt-get update -qq
 ## Specific update of autoconf and automake to avoid a bug from an obsolete command
-sudo apt-get -y upgrade 
+sudo apt-get -y install --upgrade-only autoconf automake autogen libtool 
 sudo apt-get install -y $PACKAGES
+
+# Installation of automake
+wget https://ftp.gnu.org/gnu/automake/automake-1.15.tar.gz
+tar -xvf automake-1.15.tar.gz
+cd automake-1.15
+./configure
+make
+sudo make install
 
 # Installation of Cmocka framework
 wget https://cmocka.org/files/1.0/cmocka-1.0.1.tar.xz
