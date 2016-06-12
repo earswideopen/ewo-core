@@ -9,7 +9,6 @@ AC_CANONICAL_HOST
 # Check for programs
 
 AC_PROG_CC([gcc])
-PKG_CHECK_MODULES([CMOCKA], [cmocka])
 
 # Check for libraries
 
@@ -43,6 +42,12 @@ AC_SEARCH_LIBS(\
                [], \
                AC_MSG_ERROR(Yajl is required)\
                )
+AC_SEARCH_LIBS(\
+               [_cmocka_run_group_tests], \
+               [cmocka], \
+               [], \
+               AC_MSG_ERROR(Cmocka is required for test) \
+               )
 
 
 # Check for header files
@@ -63,10 +68,5 @@ AC_CHECK_HEADERS([stdlib.h stdio.h string.h unistd.h])
 
 AC_CONFIG_SRCDIR([src/main.c])
 AC_CONFIG_HEADER([config.h])
-AC_CONFIG_FILES([\
-                 Makefile \
-                 src/Makefile \
-                 tools/Makefile \
-                 test/Makefile
-                 ])
+AC_CONFIG_FILES([Makefile])
 AC_OUTPUT
