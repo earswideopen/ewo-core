@@ -8,7 +8,7 @@ before_script:
 
 script:
     - ./autogen.sh
-    - mkdir build && cd build
+    - mkdir -p build && cd build
     - ../configure
     - make
 
