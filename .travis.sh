@@ -39,7 +39,8 @@ tar -xvf $NAME-$VERSION.$EXT
 cd $NAME-$VERSION
 ./configure
 make
-sudo checkinstall -y --pkgname $NAME --pkgversion $VERSION
+#sudo checkinstall -y --pkgname $NAME --pkgversion $VERSION
+sudo make install
 cd $CWD
 
 # Installation of autoconf
@@ -53,7 +54,8 @@ tar -xvf $NAME-$VERSION.$EXT
 cd $NAME-$VERSION
 ./configure
 make
-sudo checkinstall -y --pkgname $NAME --pkgversion $VERSION
+#sudo checkinstall -y --pkgname $NAME --pkgversion $VERSION
+sudo make install
 cd $CWD
 
 # Installation of Cmocka framework
@@ -69,7 +71,8 @@ mkdir build
 cd build
 cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release ..
 make
-sudo checkinstall -y --pkgname $NAME --pkgversion $VERSION
+#sudo checkinstall -y --pkgname $NAME --pkgversion $VERSION
+sudo make install
 cd $CWD
 
 # Installation of Yajl library
@@ -85,5 +88,6 @@ mkdir build
 cd build
 cmake ..
 make
-sudo checkinstall -y --pkgname $NAME --pkgversion $VERSION
+#sudo checkinstall -y --pkgname $NAME --pkgversion $VERSION
+sudo make install
 cd $CWD
