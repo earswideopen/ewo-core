@@ -1,6 +1,7 @@
 # Ear Wide Open
 
-Build status (branch develop): [![Build Status](https://travis-ci.org/earswideopen/ewo.svg?branch=develop)](https://travis-ci.org/earswideopen/ewo)
+Build status (master): [![Build Status](https://travis-ci.org/earswideopen/ewo-core.svg?branch=master)](https://travis-ci.org/earswideopen/ewo-core)
+Build status (develop): [![Build Status](https://travis-ci.org/earswideopen/ewo-core.svg?branch=develop)](https://travis-ci.org/earswideopen/ewo-core)
 
 ## Vision
 
