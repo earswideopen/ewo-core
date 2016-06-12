@@ -82,4 +82,27 @@ would be then:
 It's a bit tedious to use this command all the time and have some drawbacks but
 there is a `possible workaround`_.
 
+Travis-ci
+=========
+
+If you brake the build too many times with Travis-ci, it is recommended to make
+test locally on your machine. In order to do so, intall `Docker engine`_ and 
+launch it as root. In order to know if Docker is running you can use the 
+following command:
+
+    $ docker info
+
+Then, you can run the standard container of travis-ci using the command:
+
+    $ docker run -it quay.io/travisci/travis-ruby /bin/bash
+
+You know have to identify yourself as the travis user:
+
+    $ su - travis
+
+From there, clone the repository you are working on and make the test you need
+until the necessary change for the configuration build are done and working.
+
+
 .. _possible workaround:: http://fragglet.livejournal.com/14291.html
+.. _Docker engine:: https://docs.docker.com/engine/installation/
