@@ -12,7 +12,6 @@ addons:
   coverity_scan:
     project:
       name: "earswideopen/ewo-core"
-      description: "Build submitted via Travis CI"
     notification_email: matthieu@berjon.net
     build_command_prepend: "./configure; make clean"
     build_command:   "make -j 4"
@@ -32,4 +31,4 @@ branches:
     only:
         - master
         - develop
-		- coverity_scan
+        - coverity_scan
