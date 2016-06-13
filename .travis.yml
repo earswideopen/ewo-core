@@ -2,6 +2,21 @@ sudo: true
 language: c
 compiler: gcc
 
+env:
+  global:
+   # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
+   #   via the "travis encrypt" command using the project repo's public key
+   - secure: "XGCmHdOHjisvvLNEg7HKg5jhVPbInHs/D8y/YpSnfnSCGyI4j1yMYGOPhjUu1TGC4+mo2JJM3Fvvsc0EFjajyc/CdBQkmBd3Yaj8MvUMqgdlYFlRsz5tGAr48cZVGVYZyXSu0Im2y87n7v/QRLJ+pU8ipfhLQlcdX2ChAhQwFy74VZBxQk4tuG/AxQpRMgyoR4mOl2g7jczBJ9+CKKIQaYTUNT3U0gRqHStRCK4TYrbZ3VGfpR2h76c4GMrDDYgBNoZT08NOZBQRgGCG7srkDa+2gTsZgCzHEOiaGDLk9wdmtZ4tVsvN4WKM+Y1MTQrzkhI9/H5mAGXZM/oS/bvAVyWsERZCJu9KNgsc26H4sGDM85toy3nmCJkuhsnC/dzzFYuAsw8HMQ8LXI+1v8E6ukvxHRzOh0C8pA5ep85KhkNpSW1D3DOriKkZYHv7ltwIQMojB4fTIS/i39wWXZA2BJVaWHA2LHzKFhjXDLJUl2AFaU2je6rpjiA3dC4dYWguCWoBwA7e0CCeuE69LvvBItHR+IIw99+4H6y0wbz1POfrtZZA+jwcLE/Q6pvtJ5qWd8Dy1kikBDN5OYFnvVpstrdiaqtlU7mSXiiv/mSyezP9hS4SvBQT+Ro5d1PqPjYbIENZXbKUHCgrYLPUyvU3lgjkkhrA71v8OA/Lk/3Bpdk="
+
+addons:
+  coverity_scan:
+    project:
+      name: "earswideopen/ewo-core"
+      description: "Build submitted via Travis CI"
+    notification_email: matthieu@berjon.net
+    build_command_prepend: "./configure; make clean"
+    build_command:   "make -j 4"
+    branch_pattern: coverity_scan
 
 before_script:
     - ./.travis.sh
@@ -17,3 +32,4 @@ branches:
     only:
         - master
         - develop
+		- coverity_scan
