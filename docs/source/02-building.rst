@@ -17,7 +17,7 @@ from sources.
 
 * install dependencies (git, GCC),
 * checkout Ears Wide Open's source code from version control,
-* use Make to compile the source code into an executable.
+* use Autotools to compile the source code into an executable.
 
 .. todo:: 
         - Create a /lib folder to add the necessary libraries in static and compile against these
@@ -37,7 +37,9 @@ you want to build the system you will need to run three main commands from the
 root of the project:
 
         $ ./autogen.sh
-        $ ./configure
+        $ mkdir -p build
+        $ cd build
+        $ ../configure
         $ make
 
 At the moment the official release build the software against GCC 5.3.0.
@@ -61,8 +63,31 @@ environments).
 +-----------------------+-----------------------+
 | Library               | Version               |
 +=======================+=======================+
-| Portaudio             | V19                   |
+| Portaudio             | >= V19                |
 +-----------------------+-----------------------+
+| Asound                |                       |
++-----------------------+-----------------------+
+| Yajl                  | >= 2.1.0              |
++-----------------------+-----------------------+
+| Cmocka                | >= 1.0.1              |
++-----------------------+-----------------------+
+
++-----------------------+-----------------------+
+| Autotools             | Version               |
++=======================+=======================+
+| Automake              | >= 1.15               |
++-----------------------+-----------------------+
+| Autoconf              | >= 2.69               |
++-----------------------+-----------------------+
+| Libtool               | >= 2.4.6              |
++-----------------------+-----------------------+
+
++-----------------------+-----------------------+
+| Miscelleaneous        | Version               |
++=======================+=======================+
+| GCC                   | >= 5.3.0              |
++-----------------------+-----------------------+
+
 
 Debugging
 =========

@@ -55,18 +55,22 @@ Have a look at the file structure and code layout diagram.
 +-----------------------+-------------------------------------------------------+
 | Directory             | Use                                                   |
 +=======================+=======================================================+
-| /documentation/       | Document generation (sphinx), man page                |
+| /docs/                | Document generation (sphinx), man page                |
 +-----------------------+-------------------------------------------------------+
-| /sources/             | Main source code directory for code maintained by     |
+| /src/                 | Main source code directory for code maintained by     |
 |                       | Ears Wide Open developers.                            |
 +-----------------------+-------------------------------------------------------+
 | /tools/               | Different scripts or programs useful for the          |
 |                       | development and configuration of the project.         |
 +-----------------------+-------------------------------------------------------+
+| /tests/               | Test suite of the project.                            |
++-----------------------+-------------------------------------------------------+
 | README.md             | Readme file of the project. If you need anything, it's|
 |                       | usually a good place where to start.                  |
 +-----------------------+-------------------------------------------------------+
 | LICENSE               | Complete license description used in the project.     |
++-----------------------+-------------------------------------------------------+
+| CHANGELOG.md          | Main information from one release to another.         |
 +-----------------------+-------------------------------------------------------+
 
 Coding guideline
