@@ -10,7 +10,7 @@ addons:
     project:
       name: earswideopen/ewo-core
     notification_email: matthieu@berjon.net
-    build_command_prepend: "./autogen && ./configure && make clean"
+    build_command_prepend: "./autogen.sh && ./configure && make clean"
     build_command: make -j 4
     branch_pattern: coverity_scan
 
