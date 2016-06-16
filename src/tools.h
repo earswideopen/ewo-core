@@ -9,7 +9,8 @@
 	fprintf(stderr, "\nDEBUG\n%s:%s:%d\n\n", __FILE__, __func__, __LINE__)
 
 unsigned int ModuloInc(const unsigned int value, const unsigned int modulus);
-void IsFileExist(const char *path);
+int IsFileExist(const char *path);
+const char *GetHomeDir(void);
 
 /* DEBUG tools */
 void Debug(void);

@@ -7,6 +7,8 @@
 #include <unistd.h>
 #include <errno.h>
 #include <string.h>
+#include <sys/types.h>
+#include <pwd.h>
 
 /**
  * @fn		unsigned int ModuloInc(const unsigned int value, const unsigned int modulus)
@@ -34,24 +36,24 @@ unsigned int ModuloInc(const unsigned int value, const unsigned int modulus)
  * \param[in]	path	filename (include relative or absolute path to the given
  *			file to test.
  *
- * \return		Display an error message.
+ * \return		Return 0 if success or a specific code error if fail.
  *
  * \todo
  * It seems that exiting a program (using exit() function) outside the main
  * function can be dangerous regarding the memory deallocation and thread
  * issues. It would interesting to find the best practices on the matter. Second
  * thing to check is how to perform a proper unit test on a function using
- * exit().
+ * exit(). This function use the function access() given by unistd.h library.
 */
-void IsFileExist(const char *path)
+int IsFileExist(const char *path)
 {
 	int result;
 	result = access(path, F_OK);
 	if (result == -1) {
-		errno = ENOENT;
-		fprintf(stderr, "%s: %s\n", path, strerror(errno));
-		exit(EXIT_FAILURE);
+		result = ENOENT;
 	}
+
+	return result;
 }
 
 
@@ -68,4 +70,27 @@ void DebugCwd(void)
 		fprintf(stdout,
 			"DEBUG: Current working dir: %s in file %s:%d\n",
 			cwd, __FILE__, __LINE__);
+}
+
+void ErrorHandling(int errno)
+{
+	/* management of classical errno.h codes */
+
+
+	/* management of personalised error codes */
+}
+
+/**
+ * \fn		const char *GetHomeDir(void)
+ * \brief	Return the path to the $HOME (Linux only)
+ *
+ * \return	Return the path to the current $HOME folder.
+ *
+ * \todo	If necessary try to do something platform independent
+ */
+const char *GetHomeDir(void)
+{
+	//struct passwd *passwdEnt = getpwuid(getuid());
+	const char *home_dir = getpwuid(getuid())->pw_dir;
+	return home_dir;
 }
