@@ -7,7 +7,8 @@
 #include "yajl/yajl_tree.h"
 #include "tools.h"
 
-#define DEFAULT_CONFIG_FILE "src/config/default.json"
+#define DEFAULT_CONFIG_FILE "/.ewo.json"
+
 
 static unsigned char file_data[65536];
 
@@ -132,12 +133,25 @@ yajl_val LoadConfigFile(void)
 	size_t rd;
 	yajl_val node;
 	char err_buffer[1024];
+	int error;
+	const char *home_dir;
+	char config_file[512];
+
+	/* Concatenation of the $HOME folder with the file name */
+	home_dir = GetHomeDir();
+	strcpy(config_file, home_dir);
+	strcat(config_file, DEFAULT_CONFIG_FILE);
 
 	file_data[0] = err_buffer[0];
 
-	IsFileExist(DEFAULT_CONFIG_FILE);
+	error = IsFileExist(config_file);
+	if (error > 0) {
+		/* Raise an error if false */
+		fprintf(stderr, "Error %d: %s\n", error, strerror(error));
+		exit(error);
+	}
 
-	fp = fopen(DEFAULT_CONFIG_FILE, "r");
+	fp = fopen(config_file, "r");
 	/* read the entire config file */
 	rd = fread((void *) file_data, 1, sizeof(file_data) - 1, fp);
 
