@@ -24,13 +24,13 @@ March 2016.
 The source code is mainly written in ANSI-C and requires the following program
 or libraries for the compilation:
 
-- gcc >= 5.3.0
-- autoconf >= 2.69
-- GNU make >= 4.1
-- Portaudio >= V19
-- cmocka (should be optionnal to run the tests)
+- [gcc](https://gcc.gnu.org/) >= 5.3.0
+- [autoconf](https://www.gnu.org/software/autoconf/autoconf.html) >= 2.69
+- [GNU Make](https://www.gnu.org/software/make/) >= 4.1
+- [Portaudio](http://www.portaudio.com/) >= V19
+- [cmocka](https://cmocka.org/) (to run the tests; should be optional)
 
-Once these dependencies satisfied, you can compile the program using the following
+Once these dependencies are satisfied, you can compile the program using the following
 commands from the root of the project:
 
 ```
