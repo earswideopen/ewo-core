@@ -84,8 +84,8 @@ and participate.
 ### Adding documentation
 
 We’re doing our best to document each usage of the project but you can improve
-it or add you own sections. The documentation is available within the /documentation
-folder. You don’t have to build anything, we’ll take care of it once your
+it or add you own sections. The documentation is available in the [documentation
+folder](/docs). You don’t have to build anything, we’ll take care of it once your
 changes are merged.
 
 ### Improving User eXperience
