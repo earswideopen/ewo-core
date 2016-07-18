@@ -106,7 +106,7 @@ We accept donations, please contact us for any more details at
 
 ## License
 
-We’re using the GNU GENERAL PUBLIC LICENSE Version 2. Please refer to the
+We’re using the [GNU General Public License Version 2](LICENSE). Please refer to the
 LICENSE file for more information.
 
 ## Credits
