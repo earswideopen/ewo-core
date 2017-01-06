@@ -1,4 +1,4 @@
-# Ear Wide Open
+# Ears Wide Open
 
 Build status (branch develop): [![Build Status](https://travis-ci.org/earswideopen/ewo.svg?branch=develop)](https://travis-ci.org/earswideopen/ewo)
 
@@ -24,13 +24,13 @@ March 2016.
 The source code is mainly written in ANSI-C and requires the following program
 or libraries for the compilation:
 
-- gcc >= 5.3.0
-- autoconf >= 2.69
-- GNU make >= 4.1
-- Portaudio >= V19
-- cmocka (should be optionnal to run the tests)
+- [gcc](https://gcc.gnu.org/) >= 5.3.0
+- [autoconf](https://www.gnu.org/software/autoconf/autoconf.html) >= 2.69
+- [GNU Make](https://www.gnu.org/software/make/) >= 4.1
+- [Portaudio](http://www.portaudio.com/) >= V19
+- [cmocka](https://cmocka.org/) (to run the tests; should be optional)
 
-Once these dependencies satisfied, you can compile the program using the following
+Once these dependencies are satisfied, you can compile the program using the following
 commands from the root of the project:
 
 ```
@@ -84,8 +84,8 @@ and participate.
 ### Adding documentation
 
 We’re doing our best to document each usage of the project but you can improve
-it or add you own sections. The documentation is available within the /documentation
-folder. You don’t have to build anything, we’ll take care of it once your
+it or add you own sections. The documentation is available in the [documentation
+folder](/docs). You don’t have to build anything, we’ll take care of it once your
 changes are merged.
 
 ### Improving User eXperience
@@ -106,7 +106,7 @@ We accept donations, please contact us for any more details at
 
 ## License
 
-We’re using the GNU GENERAL PUBLIC LICENSE Version 2. Please refer to the
+We’re using the [GNU General Public License Version 2](LICENSE). Please refer to the
 LICENSE file for more information.
 
 ## Credits
