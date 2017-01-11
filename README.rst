@@ -13,12 +13,34 @@ ewo-core
 
 Open source hearing system software
 
+Vision
+------
 
-* Free software: GNU General Public License v2
+The project aims to create and propose, as a community, an open source hearing
+aid system (software and hardware) with the idea of giving the control back to
+its user and help him in everyday life situations that he may encounter.
+
+History
+-------
+
+The project has been thought around February 2015 but really started only in
+March 2016.
+
+Contributing
+------------
+
+You can contribute to this project in many ways. I let you refer to the
+`CONTRIBUTING`_ file to know the possibilities.
+If you don't find anything but still have questions, you can either open an
+issue or write to hello@earswideopen.net.
+
+License
+-------
+
+The project uses the GNU General Public License v2. You can find more details
+about it by reading the `LICENSE`_ file.
+
 * Documentation: https://ewo-core.readthedocs.io.
 
-
-Features
---------
-
-* TODO
+.. _CONTRIBUTING: https://github.com/earswideopen/ewo-core/blob/master/CONTRIBUTING.rst
+.. _LICENSE: https://github.com/earswideopen/ewo-core/blob/master/LICENSE
