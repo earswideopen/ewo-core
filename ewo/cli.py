@@ -9,7 +9,7 @@ Note:
     of AudioSource and have the right range of parameters that goes with it.
 
     .. code-block:: bash
-        
+
         $ ewo microphone -s 44100
         $ ewo microphone -o outputfile.wav
 
