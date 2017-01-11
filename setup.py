@@ -9,10 +9,7 @@ with open('README.rst') as readme_file:
 with open('CHANGELOG.rst') as history_file:
     history = history_file.read()
 
-requirements = [
-    'Click>=6.0',
-    # TODO: put package requirements here
-]
+requirements = open('requirements.txt', 'r').read().strip().splitlines()
 
 test_requirements = [
     # TODO: put package test requirements here
