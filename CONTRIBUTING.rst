@@ -15,7 +15,7 @@ Types of Contributions
 Report Bugs
 ~~~~~~~~~~~
 
-Report bugs at https://github.com/mattberjon/ewo/issues.
+Report bugs at https://github.com/earswideopen/ewo-core/issues.
 
 If you are reporting a bug, please include:
 
@@ -45,7 +45,8 @@ articles, and such.
 Submit Feedback
 ~~~~~~~~~~~~~~~
 
-The best way to send feedback is to file an issue at https://github.com/mattberjon/ewo/issues.
+The best way to send feedback is to file an issue at
+https://github.com/earswideopen/ewo-core/issues.
 
 If you are proposing a feature:
 
@@ -57,9 +58,9 @@ If you are proposing a feature:
 Get Started!
 ------------
 
-Ready to contribute? Here's how to set up `ewo` for local development.
+Ready to contribute? Here's how to set up `ewo-core` for local development.
 
-1. Fork the `ewo` repo on GitHub.
+1. Fork the `ewo-core` repo on GitHub.
 2. Clone your fork locally::
 
     $ git clone git@github.com:your_name_here/ewo.git
@@ -102,7 +103,7 @@ Before you submit a pull request, check that it meets these guidelines:
    your new functionality into a function with a docstring, and add the
    feature to the list in README.rst.
 3. The pull request should work for Python 2.6, 2.7, 3.3, 3.4 and 3.5, and for PyPy. Check
-   https://travis-ci.org/mattberjon/ewo/pull_requests
+   https://travis-ci.org/earswideopen/ewo-core/pull_requests
    and make sure that the tests pass for all supported Python versions.
 
 Tips

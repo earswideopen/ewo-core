@@ -1,5 +1,8 @@
-Welcome to ewo-core's documentation!
-======================================
+Welcome to Ears Wide Open
+=========================
+
+Ears Wide Open is an open source project aiming at providing an hearing aid
+system for mild hearing impaired persons.
 
 Contents:
 
@@ -10,7 +13,8 @@ Contents:
    installation
    usage
    contributing
-   authorshistory
+   authors
+   changelog
 
 Indices and tables
 ==================
