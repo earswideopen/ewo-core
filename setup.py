@@ -1,16 +1,19 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from setuptools import setup
+#  from setuptools import setup
+from setuptools import setup, find_packages
 
 with open('README.rst') as readme_file:
     readme = readme_file.read()
 
-with open('CHANGELOG.rst') as history_file:
+with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
-requirements = open('requirements.txt', 'r').read().strip().splitlines()
-
+requirements = [
+        'PyAudio>=0.2.9',
+        'click>=6.7',
+        ]
 test_requirements = [
     # TODO: put package test requirements here
 ]
@@ -22,10 +25,8 @@ setup(
     long_description=readme + '\n\n' + history,
     author="Matthieu Berjon",
     author_email='matthieu@berjon.net',
-    url='https://github.com/mattberjon/ewo',
-    packages=[
-        'ewo',
-    ],
+    url='https://github.com/earswideopen/ewo-core',
+    packages=find_packages(),
     package_dir={'ewo':
                  'ewo'},
     entry_points={
@@ -51,6 +52,6 @@ setup(
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
     ],
-    test_suite='tests',
+    test_suite='nose.collector',
     tests_require=test_requirements
 )
