@@ -1,16 +1,13 @@
 API
 ===
 
-.. I/O's managements
-.. -----------------
-..
-.. .. automodule:: ewo.audio
-..
-.. .. autoclass:: AudioSource
-..    :members:
-..    :private-members:
-..    :special-members:
-..    :exclude-members: __weakref__
+I/O's managements
+-----------------
+
+.. automodule:: ewo.audio
+
+.. autofunction:: callback
+.. autofunction:: start_recording
 
 Command Line Interface (CLI)
 ----------------------------

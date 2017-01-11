@@ -22,6 +22,7 @@ import logging
 import sys
 
 from . import __version__
+from . import audio
 
 
 logging.basicConfig(filename='ewo-core.log', level=logging.DEBUG)
@@ -40,17 +41,37 @@ def version_msg():
 
 
 @click.command(context_settings=dict(help_option_names=['-h', '--help']))
+@click.option(
+    '-w',
+    '--width',
+    type=int,
+    default=2,
+    help='Number of channels used for the stream. [default=1]')
+@click.option(
+    '-C',
+    '--channel-number',
+    type=int,
+    default=1,
+    help='Number of channels used for the stream. [default=1]')
+@click.option(
+    '-s',
+    '--sample-rate',
+    type=int,
+    default=16000,
+    help='Sample rate in hertz of the stream. [default=16000]')
 @click.version_option(
         __version__,
         '-V',
         '--version',
         message=version_msg(),
         help='Version of this application')
-def main(args=None):
-    """Console script for ewo"""
-    click.echo("Replace this message by putting your code into "
-               "ewo.cli.main")
-    click.echo("See click documentation at http://click.pocoo.org/")
+def main(
+        channel_number,
+        sample_rate,
+        width,
+        ):
+
+    audio.start_recording(width, channel_number, sample_rate)
 
 
 if __name__ == "__main__":
