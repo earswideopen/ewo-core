@@ -46,19 +46,19 @@ def version_msg():
     '--width',
     type=int,
     default=2,
-    help='Number of channels used for the stream. [default=1]')
+    help='Number of channels used for the stream. [default=2]')
 @click.option(
     '-C',
     '--channel-number',
     type=int,
-    default=1,
-    help='Number of channels used for the stream. [default=1]')
+    default=2,
+    help='Number of channels used for the stream. [default=2]')
 @click.option(
     '-s',
     '--sample-rate',
     type=int,
-    default=16000,
-    help='Sample rate in hertz of the stream. [default=16000]')
+    default=44100,
+    help='Sample rate in hertz of the stream. [default=44100]')
 @click.version_option(
         __version__,
         '-V',
