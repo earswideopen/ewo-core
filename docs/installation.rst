@@ -10,6 +10,12 @@ Stable release
 
 To install ewo-core, run this command in your terminal:
 
+.. warning::
+
+  The current system uses PyAudio that rely itself on the Portaudio library.
+  Ensure that it's installed on your machine using your favourite package 
+  manager before trying to perform the installation.
+
 .. code-block:: console
 
     $ pip install ewo
