@@ -13,6 +13,10 @@ ewo-core
 .. image:: https://coveralls.io/repos/github/earswideopen/ewo-core/badge.svg?branch=master
    :target: https://coveralls.io/github/earswideopen/ewo-core?branch=master
 
+.. image:: https://img.shields.io/badge/license-GPLv2-blue.svg
+
+.. image:: https://img.shields.io/github/release/qubyte/rubidium.svg   
+   :target: https://github.com/earswideopen/ewo-core/releases/latest
 
 Open source hearing system software
 
