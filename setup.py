@@ -20,7 +20,7 @@ test_requirements = [
 
 setup(
     name='ewo',
-    version='0.2.O',
+    version='0.2.1',
     description="Open source hearing system software",
     long_description=readme + '\n\n' + history,
     author="Matthieu Berjon",
