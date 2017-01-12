@@ -6,9 +6,27 @@ All notable changes to this project will be documented in this file.
 The format is based on `Keep a Changelog`_ and this project adheres to 
 `Semantic Versioning`_
 
+[0.2.2] - 2017-01-12
+--------------------
+
+Added
+~~~~~
+
+- Nothing
+
+Changed
+~~~~~~~
+
+- Bug fix for the documentation compilation
+- Update of the installation process
 
 [0.2.1] - 2017-01-12
 --------------------
+
+Added
+~~~~~
+
+- Nothing
 
 Changed
 ~~~~~~~
