@@ -10,6 +10,9 @@ ewo-core
    :target: https://ewo-core.readthedocs.io/en/latest/?badge=latest
    :alt: Documentation Status
 
+.. image:: https://coveralls.io/repos/github/earswideopen/ewo-core/badge.svg?branch=python-version
+   :target: https://coveralls.io/github/earswideopen/ewo-core?branch=python-version
+
 
 Open source hearing system software
 
