@@ -14,6 +14,7 @@ ewo-core
    :target: https://coveralls.io/github/earswideopen/ewo-core?branch=master
 
 .. image:: https://img.shields.io/badge/license-GPLv2-blue.svg
+   :target: https://github.com/earswideopen/ewo-core/blob/master/LICENSE
 
 .. image:: https://img.shields.io/github/release/qubyte/rubidium.svg   
    :target: https://github.com/earswideopen/ewo-core/releases/latest
