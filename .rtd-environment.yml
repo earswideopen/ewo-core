@@ -8,5 +8,7 @@ name: ewo
 
 dependencies:
   - python>=3
-  - pyaudio
-  - click
+  - libportaudio2
+  - portaudio19-dev 
+  - libasound2
+  - libasound2-dev
