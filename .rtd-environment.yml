@@ -7,4 +7,3 @@
 name: ewo
 
 dependencies:
-  - python>=3
