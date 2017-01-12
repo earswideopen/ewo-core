@@ -6,8 +6,8 @@ ewo-core
 .. image:: https://travis-ci.org/earswideopen/ewo-core.svg?branch=python-version
    :target: https://travis-ci.org/earswideopen/ewo-core
 
-.. image:: https://readthedocs.org/projects/ewo/badge/?version=latest
-   :target: https://ewo-core.readthedocs.io/en/latest/?badge=latest
+.. image:: https://readthedocs.org/projects/ewo-core/badge/?version=latest
+   :target: http://ewo-core.readthedocs.io/en/latest/?badge=latest
    :alt: Documentation Status
 
 .. image:: https://coveralls.io/repos/github/earswideopen/ewo-core/badge.svg?branch=master
