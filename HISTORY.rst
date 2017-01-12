@@ -7,7 +7,16 @@ The format is based on `Keep a Changelog`_ and this project adheres to
 `Semantic Versioning`_
 
 
-[0.2.O] - Unrealased
+[0.2.1] - 2017-01-12
+--------------------
+
+Changed
+~~~~~~~
+
+- Fix the documentation compilation on ReadTheDocs
+- Fix badge for coveralls service
+
+[0.2.O] - 2017-01-12
 --------------------
 
 Added
