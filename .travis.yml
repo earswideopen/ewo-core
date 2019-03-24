@@ -19,6 +19,9 @@ matrix:
     - python: 3.7
       dist: xenial
       env: TOXENV=docs
+  allow_failures:
+    - env: TOXENV=flake8
+	  - env: TOXENV=docs
 
 before_script:
   - sudo apt-get update -qq
