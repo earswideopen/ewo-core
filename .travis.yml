@@ -2,22 +2,22 @@
 # This file will be regenerated if you run travis_pypi_setup.py
 
 language: python
-python: 3.5
+python: 3.6
 
 before_script:
   - sudo apt-get update -qq
   - sudo apt-get install -y libportaudio2 portaudio19-dev libasound2 libasound2-dev
 
 env:
+  - TOXENV=py37
+  - TOXENV=py36
   - TOXENV=py35
-  - TOXENV=py34
-  - TOXENV=py33
   - TOXENV=py27
   - TOXENV=flake8
 
 # command to install dependencies, e.g. pip install -r requirements.txt
 # --use-mirrors
-install: pip install -U tox coveralls
+install: pip install --upgrade tox coveralls
 
 # command to run tests, e.g. python setup.py test
 script: 
