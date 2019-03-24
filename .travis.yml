@@ -21,7 +21,7 @@ matrix:
       env: TOXENV=docs
   allow_failures:
     - env: TOXENV=flake8
-	  - env: TOXENV=docs
+    - env: TOXENV=docs
 
 before_script:
   - sudo apt-get update -qq
