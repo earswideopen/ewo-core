@@ -1,3 +1,5 @@
+# flake8: noqa
+
 import pytest
 
 from ewo import audio

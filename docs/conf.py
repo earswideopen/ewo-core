@@ -23,7 +23,7 @@ import ewo
 class Mock(MagicMock):
     @classmethod
     def __getattr__(cls, name):
-            return MagicMock()
+        return MagicMock()
 
 
 MOCK_MODULES = ['pyaudio']
